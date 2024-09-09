@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃스타일1</title>
+    <link rel="stylesheet" href="css/layout.css">
+</head>
+<body>
+    <h1>레이아웃 스타일</h1>
+    <hr>
+    <h3>width/height : 내용이 차지하고있는 영역의 크기</h3>
+    <pre>선택자{width:크기(단위); height:크기(단위);}</pre>
+    <div class="div1">ㅁㄴㅇㄹ</div>
+    <hr>
+    <div class="div2">
+        <div class="div3"></div>
+    </div>
+    <hr>
+    <div class="div4">
+        <div class="div5"></div>
+    </div>
+    <hr>
+    <div class="div6">
+        <div class="div7"></div>
+        <div class="div8"></div>
+    </div>
+    <div class="div9"></div>
+    <hr>
+    <div class="div10">
+        <div class="div11"></div>
+    </div>
+    <hr>
+    <h3>display : 요소의 화면 배치 방법</h3>
+    <pre>선택자{display : none | block | inline | inline-bolck | flex}</pre>
+    <div class="div12">
+        <div class="div13">div</div>
+        <span class="span1">span1</span>
+        <span class="span2">span2</span>
+        <span class="span3">span3</span>
+    </div>
+    <div class="div14">
+        <div>마우스를 올려보세요</div>
+        <ul class="ul1">
+            <li>목록1</li>
+            <li>목록2</li>
+            <li>목록3</li>
+        </ul>
+    </div>
+    <hr>
+    <input type="radio" name="gender" id="m" value="m">
+    <label for="m">남자</label>
+    <input type="radio" name="gender" id="f" value="f">
+    <label for="f">여자</label>
+    <hr>
+    <h2>테두리 스타일 지정</h2>
+    <h3>border-style : 테두리 스타일 지정</h3>
+    <pre>선택자{border-[방향]-style : none | hidden | dashed | dotted | double | groove | inset | outset | ridge | solid} </pre>
+    
+    <h3>border-width : 테두리 두께 지정</h3>
+    <pre>선택자{border-[방향]-width : thin | medium | thick | px}</pre>
+    
+    <h3>border-color : 테두리 색상 지정</h3>
+    <pre>선택자{border-[방향]-color : 색상값}</pre>
+    
+    <h3>border : 테두리 스타일 한번에 지정</h3>
+    <pre>선택자{border-[방향] : width style color}</pre>
+
+    <h3>border-radius : 박스의 모서리를 둥글게 하는 속성</h3>
+    <pre>선택자{border-[방향]-radius : 숫자}</pre>
+
+    <h3>border-shadow : box 그림자 주는 속성</h3>
+    <pre>선택자{box-shadow : 수평거리 수직거림 흐림 번짐 색상}</pre>
+    <div class="div d1"></div>
+    <div class="div d2"></div>
+    <div class="div d3"></div>
+    <div class="div d4"></div>
+    <div class="div d5"></div>
+    <div class="div d6"></div>
+    <div class="div d7"></div>
+    <div class="div d8"></div>
+    <div class="div d9"></div>
+    <div class="div d10"></div>
+    <div class="div d11"></div>
+    <div class="div d12"></div>
+    <div class="div d13"></div>
+    <!-- div.div.d$*13 -->
+    <hr>
+    <h2>여백스타일</h2>
+    <h3>margin : 요소와 요소 사이의 거리</h3>
+    <pre>
+        선택자{margin-[위치] : 거리;} -> top,right,bottom,left를 선택해서 거리를 지정
+        선택자{margin : 거리;} -> 4방향 한번에 설정
+        선택자{margin : 거리1 거리2;} -> 거리1 : top,bottom 설정 / 거리2 : left right 한번에 설정
+        선택자{margin : 거리1 거리2 거리3 거리4;} -> 거리1 : top / 거리2 : right / 거리3 : bottom / 거리4 : left
+    </pre>
+    <h3>padding : 테두리와 컨체츠 사이의 거리</h3>
+    <pre>
+        선택자{padding : 거리;} -> 4방향 한번에 설정 / 다른옵션은 마진과 동일
+    </pre>
+    <!--보더 기준으로 안쪽 패딩 밭깥 마진 -->
+    <div class="div-m test1">내용11111내용11111내용11111내용11111내용11111내용11111내용11111내용11111내용11111내용11111</div>
+    <div class="div-m test2">내용22222내용22222내용22222내용22222내용22222내용22222내용22222내용22222내용22222내용22222</div>
+    <hr>
+    <div class="test3">
+        <div class="test4">내용</div>
+    </div>
+    <!-- 
+    컨텐츠 가운데정렬
+    가운데로 보내고 싶은 컨텐츠가 
+    <div class="div1">
+        <div class ="div2"></div>
+    </div>    
+    1)display : block; 요소인 경우
+                좌우 정렬 : 가운데 정렬하고싶은요소(.div2)의 좌우 마진을 auto로 설정(margin : 0 auto)
+                상하 정렬 : 가운데 정렬하고싶은 요소를 감싸고있는요소(.div1)의 padding top/bottom으로 처리
+
+    div class="div1">
+        <span class="span1">글씨</span>
+    </div>                
+    2)display : inline or inline-bolck; 요소인경우 
+                좌우 정렬 : 가운데 정렬하고싶은 요소를 감싸고 있는 요소(.div1)의 text-align:center
+                상하 정렬 : 가운데 정렬하고싶은 요소(.sapn1)의 행의 높이를 감싸고있는 요소.(div1)과 같게설정
+                            -> 행간의 높이가 글씨보다크면 글씨를 가운데 배치하는 속성을 이용(line-height)
+    -->
+</body>
+</html>
